@@ -7,69 +7,66 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container columns-2">
         <div class="content-row">
-            <label class="field-title">PC</label><input id="character-name" type="text" class="field-data"></input><p class="field-desc">Character name</p>
+            <label class="field-title">Player</label><input id="player-name" type="text" class="field-data"></input><p class="field-desc">Player name</p>
         </div>
         <div class="content-row">
-            <label class="field-title">Class</label><input id="class" type="text" class="field-data"></input><p class="field-desc"></p>
+            <label class="field-title">Character</label><input id="character-name" type="text" class="field-data"></input><p class="field-desc">Character name</p>
         </div>
         <div class="content-row">
-            <label class="field-title">AL</label><input id="alignment" type="text" class="field-data"></input><p class="field-desc">Alignment</p>
+            <label class="field-title">Species</label><input id="species" type="text" class="field-data"></input><p class="field-desc">Species</p>
         </div>
         <div class="content-row">
-            <label class="field-title">Level</label><input id="level" type="number" class="field-data"></input><p class="field-desc"></p>
+            <label class="field-title">Gender</label><input id="gender" type="text" class="field-data"></input><p class="field-desc">Gender</p>
         </div>
         <div class="content-row">
-            <label class="field-title">Exp</label><input id="cur-exp" type="number" class="field-data"></input><p class="field-desc">Experience Points</p>
+            <label class="field-title">Age</label><input id="age" type="number" class="field-data"></input><p class="field-desc">Age</p>
         </div>
         <div class="content-row">
-            <label class="field-title">Next</label><input id="next-lvl-exp" type="number" class="field-data"></input><p class="field-desc">Exp to next level</p>
+            <label class="field-title">Frame</label><input id="frame" type="text" class="field-data"></input><p class="field-desc">Frame</p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Culture</label><input id="culture" type="text" class="field-data"></input><p class="field-desc">Culture</p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Height</label><input id="frame" type="height" class="field-data"></input><p class="field-desc">Height</p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Social Class</label><input id="social-class" type="text" class="field-data"></input><p class="field-desc">Social Class</p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Weight</label><input id="weight" type="text" class="field-data"></input><p class="field-desc">Weight</p>
+        </div>
+        <div class="content-row">
+            <label class="field-title">Career</label><input id="career" type="text" class="field-data"></input><p class="field-desc">Career</p>
         </div>
     </div>
-    <div class="container columns-2">
+    <div class="container">
         <div class="container">
             <h1>Stats</h1>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Strength">STR</label><input id="str" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="1d100" data-modifier="no-mod" data-label="Strength">STR</label><input id="str" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Intelligence">INT</label><input id="int" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="1d100" data-modifier="no-mod" data-label="Constitution">CON</label><input id="con" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Wisdom">WIS</label><input id="wis" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="1d100" data-modifier="no-mod" data-label="Size">SIZ</label><input id="siz" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Dexterity">DEX</label><input id="dex" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="1d100" data-modifier="no-mod" data-label="Dexterity">DEX</label><input id="dex" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Constitution">CON</label><input id="con" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="1d100" data-modifier="no-mod" data-label="Intelligence">INT</label><input id="int" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Charisma">CHA</label><input id="cha" type="number" class="field-data-short"></input>
-            </div>
-            <label class="field-desc">Values from 0-20</label>
-        </div>
-        <div class="container">
-            <h1>Saving Throws</h1>
-            <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Strength">STR</label><input id="save-strength" type="number" class="field-data-short"></input><p class="field-desc">Resist being Moved</p>
+                <label class="field-title" data-dice-type="1d100" data-modifier="no-mod" data-label="Power">POW</label><input id="pow" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Intelligence">INT</label><input id="save-intelligence" type="number" class="field-data-short"></input><p class="field-desc">Spells</p>
+                <label class="field-title" data-dice-type="1d100" data-modifier="no-mod" data-label="Charisma">CHA</label><input id="cha" type="number" class="field-data-short"></input>
             </div>
-            <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Wisdom">WIS</label><input id="save-wisdom" type="number" class="field-data-short"></input><p class="field-desc">Resist Mindcontrol</p>
-            </div>
-            <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Dexterity">DEX</label><input id="save-dex" type="number" class="field-data-short"></input><p class="field-desc">Dodge</p>
-            </div>
-            <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Constitution">CON</label><input id="save-constitution" type="number" class="field-data-short"></input><p class="field-desc">Poison</p>
-            </div>
-            <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Save Charisma">CHA</label><input id="save-charisma" type="number" class="field-data-short"></input><p class="field-desc">Charmed</p>
-            </div>
+            <label class="field-desc">Values from 1-100</label>
         </div>
     </div>
     <div class="container columns-2">
