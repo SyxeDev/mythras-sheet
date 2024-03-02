@@ -214,16 +214,439 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Movement Rate</span>
                             </div>
-                            <input class="form-control" id="move-rate1" type="number"/>
-                            <input class="form-control" id="move-rate2" type="number"/>
+                            <input class="form-control" id="move-rate1" type="number">
+                            <input class="form-control" id="move-rate2" type="number">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="card col-6">
+            <h5 class="card-title">Standard Skills</h5>
+            <div class="card-body container">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Athletics</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Boating</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Conceal</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Customs</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Dance</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Deceit</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Drive</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">First Aid</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Influence</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Insight</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Locale</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Perception</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Ride</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Sing</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Stealth</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Swim</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <span class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">Unarmed</span>
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card col-6">
+            <h5 class="card-title">Professional Skills</h5>
+            <div class="card-body container">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">                            
+                            <div class="input-group-prepend col-6">
+                                <input class="input-group-text" data-dice-type="1d100 1d10" data-modifier="no-mod">
+                            </div>
+                            <input type="checkbox" aria-label="Critical Failure" class="form-control col-1">
+                            <input type="number" class="form-control col-3">
+                            <div class="input-group-append col-1">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- data-dice-type="1d100 1d10" data-modifier="no-mod" -->
 </body>
 </html>           
     <!-- 
