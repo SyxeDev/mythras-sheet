@@ -14,7 +14,7 @@
       }
     },
     "environment": {
-      "webViewBackgroundColor": "#000000",
+      "webViewBackgroundColor": "#FFFFFF",
       "extras": [
         "fonts",
         "icons",

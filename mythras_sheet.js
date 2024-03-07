@@ -227,8 +227,8 @@ function clearSheet() {
         }
     }
 }
-
 function onStateChangeEvent(msg) {
+
     if (msg.kind === "hasInitialized") {
         //the TS Symbiote API has initialized and we can begin the setup. think of this as "init".
         clearStorageButton = document.getElementById("clear-storage");
