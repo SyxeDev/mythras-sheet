@@ -17,9 +17,11 @@
     <button data-dice-type="1d100 1d10" data-modifier="no-mod">Roll</button>
     <button data-dice-type="1d10" data-modifier="no-mod">Roll Initiative</button>
     <button data-dice-type="1d20" data-modifier="no-mod">Roll Hit Location</button>
+    <button id="export" onclick="exportSheet()">Export</button>
+    <input id="import-data" placeholder="Import"><button id="import" onclick="importSheet()">Import</button>
 </div>
-<div class="container p-1 mt-3" id="root">
-    <div class="row card p-0">
+<div class="container pt-1 mt-3" id="root">
+    <div class="row card p-0 mt-3">
         <h5 class="card-title"><button class="btn btn-link collapsible">Character Information</button></h5>
         <div class="content card-body">
             <div>

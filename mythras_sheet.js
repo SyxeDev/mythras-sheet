@@ -1,5 +1,7 @@
 var clearStorageButton = undefined;
-
+var importButton = undefined;
+var exportButton = undefined;
+var importText = "{}";
 function initSheet() {
     let inputs = document.querySelectorAll("input,button,textarea");
     for (let input of inputs) {
@@ -54,6 +56,7 @@ function onInputChange(input) {
         //parse stored blob as json, but also handle if it's empty by
         //defaulting to an empty json document "{}" if stored data is false
         data = JSON.parse(storedData || "{}");
+        if (input.id == "import-data") { return; }
         if (input.type == "checkbox") {
             data[input.id] = input.checked ? "on" : "off";
         } else {
@@ -78,6 +81,30 @@ function onInputChange(input) {
         let actions = parseActions(input.value);
         addActions(actions);
     }
+}
+function importSheet() {
+    var text = importText.value;
+    TS.localStorage.campaign.setBlob(text).then(() => {
+        //if storing the data succeeded, enable the clear storage button
+        clearStorageButton.classList.add("danger");
+        clearStorageButton.disabled = false;
+        clearStorageButton.textContent = "Clear Character Sheet";
+        loadStoredData();
+
+    }).catch((setBlobResponse) => {
+        TS.debug.log("Failed to store change to local storage: " + setBlobResponse.cause);
+        console.error("Failed to store change to local storage:", setBlobResponse);
+    });
+}
+
+function exportSheet() {
+    TS.localStorage.campaign.getBlob().then((storedData) => {
+        console.log(storedData);
+        navigator.clipboard.writeText(storedData);
+    }).catch((getBlobResponse) => {
+        TS.debug.log("Failed to load data from local storage: " + getBlobResponse.cause);
+        console.error("Failed to load data from local storage:", getBlobResponse);
+    });
 }
 
 function findFirstSiblingWithClass(element, className) {
@@ -232,6 +259,9 @@ function onStateChangeEvent(msg) {
     if (msg.kind === "hasInitialized") {
         //the TS Symbiote API has initialized and we can begin the setup. think of this as "init".
         clearStorageButton = document.getElementById("clear-storage");
+        importButton = document.getElementById("import");
+        importText = document.getElementById("import-data");
+        exportButton = document.getElementById("export");
         loadStoredData();
         initSheet();
     }
