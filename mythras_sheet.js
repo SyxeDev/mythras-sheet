@@ -90,10 +90,12 @@ function importSheet() {
         clearStorageButton.disabled = false;
         clearStorageButton.textContent = "Clear Character Sheet";
         loadStoredData();
+        importText.value = "Success";
 
     }).catch((setBlobResponse) => {
         TS.debug.log("Failed to store change to local storage: " + setBlobResponse.cause);
         console.error("Failed to store change to local storage:", setBlobResponse);
+        importText.value = "Balls";
     });
 }
 
