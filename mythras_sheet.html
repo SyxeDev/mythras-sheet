@@ -19,14 +19,11 @@
     <button data-dice-type="1d20" data-modifier="no-mod">Roll Hit Location</button>
 </div>
 <div class="container p-1 mt-3" id="root">
-    <div class="row">
-        <div class="card">
-        <h5 class="card-title">
-            <button class="btn btn-link collapsible">Character Information</button>
-        </h5>
-        <div class="content">
-            <div class="row">
-                <div class="card-body">
+    <div class="row card p-0">
+        <h5 class="card-title"><button class="btn btn-link collapsible">Character Information</button></h5>
+        <div class="content card-body">
+            <div>
+                <div>
                     <div class="row">
                         <div class="col form-group">
                             <label for="character-name" class="col-form-label">Character Name</label>
@@ -89,16 +86,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
-                    <h6 class="card-subtitle">Notes</h6>
+                <div class="col">
+                    <h6 class="card-title">Notes</h6>
                     <div class="card-body">
                         <div class="row">
                             <textarea id="notes" rows="6" cols="25"></textarea>
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
-                    <h6 class="card-subtitle">Wealth & XP Rolls</h6>
+                <div class="col">
+                    <h6 class="card-title">Wealth & XP Rolls</h6>
                     <div class="card-body container">
                         <div class="row">
                             <textarea id="wealth" rows="2" cols="25"></textarea>
@@ -127,595 +124,589 @@
                         </div>
                     </div>
                 </div>
+                <div>
+                    <h6 class="card-title">Characteristics & Attributes</h6>
+                    <div class="card-body row">
+                        <div class="col-6">
+                            <table class="table">
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Base</th>
+                                    <th>Current</th>
+                                </tr>
+                                <tr>
+                                    <td>Strength</td>
+                                    <td><input type="number" name="attribute-base-str" id="attribute-base-str"></td>
+                                    <td><input type="number" name="attribute-curr-str" id="attribute-curr-str"></td>
+                                </tr>
+                            </table>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Strength</span>
+                                </div>
+                                <input class="form-control" id="str1" type="number"/>
+                                <input class="form-control" id="str2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Constitution</span>
+                                </div>
+                                <input class="form-control" id="con1" type="number"/>
+                                <input class="form-control" id="con2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Size</span>
+                                </div>
+                                <input class="form-control" id="siz1" type="number"/>
+                                <input class="form-control" id="siz2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Dexterity</span>
+                                </div>
+                                <input class="form-control" id="dex1" type="number"/>
+                                <input class="form-control" id="dex2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Intelligence</span>
+                                </div>
+                                <input class="form-control" id="int1" type="number"/>
+                                <input class="form-control" id="int2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Power</span>
+                                </div>
+                                <input class="form-control" id="pow1" type="number"/>
+                                <input class="form-control" id="pow2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Charisma</span>
+                                </div>
+                                <input class="form-control" id="cha1" type="number"/>
+                                <input class="form-control" id="cha2" type="number"/>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Action Points</span>
+                                </div>
+                                <input class="form-control" id="action-points1" type="number"/>
+                                <input class="form-control" id="action-points2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Damage Modifier</span>
+                                </div>
+                                <input class="form-control" id="damage-mod1" type="number"/>
+                                <input class="form-control" id="damage-mod2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Experience Modifier</span>
+                                </div>
+                                <input class="form-control" id="xp-mod1" type="number"/>
+                                <input class="form-control" id="xp-mod2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Healing Rate</span>
+                                </div>
+                                <input class="form-control" id="heal-rate1" type="number"/>
+                                <input class="form-control" id="heal-rate2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Initiative</span>
+                                </div>
+                                <input class="form-control" id="initiative1" type="number"/>
+                                <input class="form-control" id="initiative2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Luck Points</span>
+                                </div>
+                                <input class="form-control" id="luck1" type="number"/>
+                                <input class="form-control" id="luck2" type="number"/>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Movement Rate</span>
+                                </div>
+                                <input class="form-control" id="move-rate1" type="number">
+                                <input class="form-control" id="move-rate2" type="number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    
-    <div class="row p-0">
+    <div class="row card">
+        <h5 class="card-title"><button class="btn btn-link collapsible">Skills, Resistances, Passions, Magic</button></h5>
+        <div class="content">
+            
+        </div>
+        
+    </div>
+    <div class="row">
+    <div class="col-6">
         <div class="card">
-            <h5 class="card-title">Characteristics & Attributes</h5>
-            <div class="card-body">
-                <div class="row p-0">
-                    <div class="col-6">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Strength</span>
+            <h6 class="card-subtitle">Standard Skills</h6>
+            <div class="card-body container">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-1-cf" placeholder="Athletics (STR + DEX)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="str1" type="number"/>
-                            <input class="form-control" id="str2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Constitution</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-2-cf" placeholder="Boating (STR + CON)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-2-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-2-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="con1" type="number"/>
-                            <input class="form-control" id="con2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Size</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-3-cf" placeholder="Conceal (DEX + POW)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-3-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-3-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="siz1" type="number"/>
-                            <input class="form-control" id="siz2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Dexterity</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-4-cf" placeholder="Customs (INT x2)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-4-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-4-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="dex1" type="number"/>
-                            <input class="form-control" id="dex2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Intelligence</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-5-cf" placeholder="Dance (DEX + CHA)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-5-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-5-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="int1" type="number"/>
-                            <input class="form-control" id="int2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Power</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-6-cf" placeholder="Deceipt (INT + CHA)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-6-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-6-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="pow1" type="number"/>
-                            <input class="form-control" id="pow2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Charisma</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-7-cf" placeholder="Drive (DEX + POW)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-7-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-7-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="cha1" type="number"/>
-                            <input class="form-control" id="cha2" type="number"/>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Action Points</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-8-cf" placeholder="First Aid (INT + DEX)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-8-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-8-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="action-points1" type="number"/>
-                            <input class="form-control" id="action-points2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Damage Modifier</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-9-cf" placeholder="Influence (CHA x2)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-9-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-9-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="damage-mod1" type="number"/>
-                            <input class="form-control" id="damage-mod2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Experience Modifier</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-10-cf" placeholder="Insight (INT + POW)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-10-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-10-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="xp-mod1" type="number"/>
-                            <input class="form-control" id="xp-mod2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Healing Rate</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-11-cf" placeholder="Locale (INT x2)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-11-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-11-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="heal-rate1" type="number"/>
-                            <input class="form-control" id="heal-rate2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Initiative</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-12-cf" placeholder="Perception (INT + POW)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-12-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-12-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="initiative1" type="number"/>
-                            <input class="form-control" id="initiative2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Luck Points</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-13-cf" placeholder="Ride (DEX + POW)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-13-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-13-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="luck1" type="number"/>
-                            <input class="form-control" id="luck2" type="number"/>
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Movement Rate</span>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-14-cf" placeholder="Sing (CHA + POW)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-14-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-14-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                            <input class="form-control" id="move-rate1" type="number">
-                            <input class="form-control" id="move-rate2" type="number">
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-15-cf" placeholder="Stealth (DEX + INT)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-15-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-15-val" class="form-control col-5">
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-16-cf" placeholder="Swim (STR + CON)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-16-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-16-val" class="form-control col-5">
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-std-17-cf" placeholder="Unarmed (STR + DEX)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-std-17-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-std-17-val" class="form-control col-5">
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="row p-0">
-        <div class="col-6">
-            <div class="card">
-                <h5 class="card-title">Standard Skills</h5>
-                <div class="card-body container">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-1-cf" placeholder="Athletics (STR + DEX)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+    <div class="col-6">
+        <div class="card">
+            <h5 class="card-title">Resistances</h5>
+            <div class="card-body container">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-res-1-cf" placeholder="Brawn (STR + SIZ)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-res-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-res-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-2-cf" placeholder="Boating (STR + CON)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-2-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-2-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-res-2-cf" placeholder="Endurance (CON x2)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-res-2-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-res-2-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-3-cf" placeholder="Conceal (DEX + POW)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-3-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-3-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-res-3-cf" placeholder="Evade (DEX x2)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-res-3-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-res-3-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-4-cf" placeholder="Customs (INT x2)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-4-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-4-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input readonly class="form-control mb-3 skill-res-4-cf" placeholder="Willpower (POW x2)">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-res-4-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-res-4-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-5-cf" placeholder="Dance (DEX + CHA)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-5-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-5-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-6-cf" placeholder="Deceipt (INT + CHA)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-6-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-6-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-7-cf" placeholder="Drive (DEX + POW)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-7-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-7-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-8-cf" placeholder="First Aid (INT + DEX)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-8-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-8-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-9-cf" placeholder="Influence (CHA x2)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-9-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-9-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-10-cf" placeholder="Insight (INT + POW)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-10-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-10-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-11-cf" placeholder="Locale (INT x2)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-11-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-11-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-12-cf" placeholder="Perception (INT + POW)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-12-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-12-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-13-cf" placeholder="Ride (DEX + POW)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-13-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-13-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-14-cf" placeholder="Sing (CHA + POW)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-14-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-14-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-15-cf" placeholder="Stealth (DEX + INT)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-15-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-15-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-16-cf" placeholder="Swim (STR + CON)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-16-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-16-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-std-17-cf" placeholder="Unarmed (STR + DEX)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-std-17-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-std-17-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="col-6">
-            <div class="card">
-                <h5 class="card-title">Resistances</h5>
-                <div class="card-body container">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-res-1-cf" placeholder="Brawn (STR + SIZ)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-res-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-res-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+        <div class="card">
+            <h5 class="card-title">Professional Skills</h5>
+            <div class="card-body container">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-1-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-res-2-cf" placeholder="Endurance (CON x2)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-res-2-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-res-2-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-2-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-res-3-cf" placeholder="Evade (DEX x2)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-res-3-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-res-3-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-3-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input readonly class="form-control mb-3 skill-res-4-cf" placeholder="Willpower (POW x2)">
-                                <div class="row">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-res-4-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-res-4-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-4-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card">
-                <h5 class="card-title">Professional Skills</h5>
-                <div class="card-body container">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-1-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-5-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-2-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-6-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-3-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-7-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-4-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-8-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-5-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-9-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
                             </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-6-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-7-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-8-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-9-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card">
-                <h5 class="card-title">Languages</h5>
-                <div class="card-body container">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-1-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-1-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-1-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-1-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-5">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    
+        <div class="card">
+            <h5 class="card-title">Languages</h5>
+            <div class="card-body container">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-1-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-1-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-1-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <div class="text-center mb-3">
+                            <input type="text" id="skill-pro-1-lbl" class="form-control">
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                                <div class="col-1"></div>
+                                <input type="number" id="skill-pro-1-val" class="form-control col-5">
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="row p-0">
-        <div class="col-6">
-            <div class="card">
-                <h5 class="card-title">Magic Points & Skills</h5>
-                <div class="form-body">
-                    <div class="form-group">
-                        <label for="mp-current" class="col-form-label">Current: </label>
-                        <input type="number" id="mp-current" class="form-control-sm">
-                        <label for="mp-max" class="col-form-label">Max: </label>
-                        <input type="number" id="mp-max" class="form-control-sm">
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item p-0">
-                            <div class="text-center mb-3">
-                                <input type="text" id="skill-pro-1-lbl" class="form-control">
-                                <div class="row mt-2">
-                                    <div class="col-2"></div>
-                                    <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
-                                    <div class="col-1"></div>
-                                    <input type="number" id="skill-pro-1-val" class="form-control col-2">
-                                    <div class="col-2"></div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <h5 class="card-title">Passions</h5>
+
+    </div>
+    <div class="row">
+    <div class="col-6">
+        <div class="card">
+            <h5 class="card-title">Magic Points & Skills</h5>
             <div class="form-body">
+                <div class="form-group">
+                    <label for="mp-current" class="col-form-label">Current: </label>
+                    <input type="number" id="mp-current" class="form-control-sm">
+                    <label for="mp-max" class="col-form-label">Max: </label>
+                    <input type="number" id="mp-max" class="form-control-sm">
+                </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item p-0">
                         <div class="text-center mb-3">
@@ -733,19 +724,39 @@
             </div>
         </div>
     </div>
-    <div class="row p-0">
-        <div class="card">
-            <h5 class="card-title">Magic & Abilities</h5>
-            <h6 class="card-subtitle">Spells, Spirits, Talents, Miracles, ...</h6>
-            <div class="card-body container">
-                <div class="row">
-                    <textarea id="notes" rows="6" cols="75"></textarea>
-                </div>
+    <div class="col-6">
+        <h5 class="card-title">Passions</h5>
+        <div class="form-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item p-0">
+                    <div class="text-center mb-3">
+                        <input type="text" id="skill-pro-1-lbl" class="form-control">
+                        <div class="row mt-2">
+                            <div class="col-2"></div>
+                            <input type="checkbox" id="skill-pro-1-cf" class="form-control col-2">
+                            <div class="col-1"></div>
+                            <input type="number" id="skill-pro-1-val" class="form-control col-2">
+                            <div class="col-2"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="card">
+        <h5 class="card-title">Magic & Abilities</h5>
+        <h6 class="card-subtitle">Spells, Spirits, Talents, Miracles, ...</h6>
+        <div class="card-body container">
+            <div class="row">
+                <textarea id="notes" rows="6" cols="75"></textarea>
             </div>
         </div>
     </div>
-    <div class="row p-0">
-        <div class="card"></div>
+    </div>
+    <div class="row">
+    <div class="card">
         <h5 class="card-title">Fatigue</h5>
         <div class="card-body">
             <table class="table">
@@ -760,33 +771,106 @@
                 </tr>
                 <tr>
                     <td>
-                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-fresh" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-fresh" value="fresh" checked>
                     </td>
                     <td>Fresh</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
                 </tr>
-              </table>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-winded" value="winded" checked>
+                    </td>
+                    <td>Winded</td>
+                    <td>Hard</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>15m</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-tired" value="tired" checked>
+                    </td>
+                    <td>Tired</td>
+                    <td>Hard</td>
+                    <td>-1m</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>3h</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-wearied" value="wearied" checked>
+                    </td>
+                    <td>Wearied</td>
+                    <td>Formidable</td>
+                    <td>-2</td>
+                    <td>-2</td>
+                    <td>-</td>
+                    <td>6h</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-exhausted" value="exhausted" checked>
+                    </td>
+                    <td>Exhausted</td>
+                    <td>Formidable</td>
+                    <td>Half</td>
+                    <td>-4</td>
+                    <td>-1</td>
+                    <td>12h</td>
+                </tr>
+                <tr>
+                    <td>
+                    <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-debilitated" value="debilitated" checked>
+                    </td>
+                    <td>Debilitated</td>
+                    <td>Herculaen</td>
+                    <td>Half</td>
+                    <td>-6</td>
+                    <td>-2</td>
+                    <td>18h</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-incapacitated" value="incapacitated" checked>
+                    </td>
+                    <td>Incapacitated</td>
+                    <td>Herculaen</td>
+                    <td>None</td>
+                    <td>-8</td>
+                    <td>-3</td>
+                    <td>24h</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-semiconscious" value="semiconscious" checked>
+                    </td>
+                    <td>Semi-Conscious</td>
+                    <td>Hopeless</td>
+                    <td>None</td>
+                    <td>Zero</td>
+                    <td>Zero</td>
+                    <td>36h</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="fatigue-level" id="fatigue-level-comatose" value="comatose" checked>
+                    </td>
+                    <td>Comatose</td>
+                    <td>Impossible</td>
+                    <td>None</td>
+                    <td>Zero</td>
+                    <td>Zero</td>
+                    <td>48h</td>
+                </tr>
+            </table>
         </div>
-        <div class="form-check">
-            
-            <label class="form-check-label" for="exampleRadios1">
-              Default radio
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-              Second default radio
-            </label>
-          </div>
-          <div class="form-check disabled">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-            <label class="form-check-label" for="exampleRadios3">
-              Disabled radio
-            </label>
-          </div>
-        </div>
+    </div>
     </div>
 </div>
 </body>
