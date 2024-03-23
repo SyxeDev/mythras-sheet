@@ -1,12 +1,14 @@
+* {
+    font-family: 'OptimusPrinceps', sans-serif !important;
+}
+
 body {
     background-color: var(--ts-background-primary);
     color: var(--ts-color-primary);
-    font-family: 'OptimusPrinceps', sans-serif;
     max-width: 1000px;
     margin: 0 auto 0 auto;
     padding: 10px;
 }
-
 h1 {
     font-size: 1.8em;
     margin-bottom: 0.2em;
@@ -58,7 +60,10 @@ p {
 .field-data-short {
     width: 3em;
 }
-
+.dark {
+    background-color:var(--ts-background-primary) !important;
+    color: var(--ts-color-secondary) !important;
+}
 .field-desc {
     font-size: 0.7em;
     font-style: italic;
@@ -128,8 +133,6 @@ p {
 button, input {
     background-color: var(--ts-background-secondary);
     color: var(--ts-color-primary);
-    font-family: 'OptimusPrinceps', sans-serif;
-
     border: 1px solid var(--ts-accessibility-border);
     border-radius: 4px;
     font-size: 1.2em;
@@ -178,7 +181,6 @@ textarea {
     background-color: var(--ts-background-secondary);
     color: var(--ts-color-primary);
     font-size: 1em;
-    font-family: 'OptimusPrinceps', sans-serif;
 
     border: 1px solid var(--ts-accessibility-border);
     border-radius: 4px;
