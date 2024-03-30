@@ -212,14 +212,19 @@ function loadStoredData() {
         for (let [key, value] of Object.entries(data)) {
             keyCount++;
             let element = document.getElementById(key);
-            element.value = value;
-            if (key == "thac0") {
-                element.dispatchEvent(new Event('change'));
-            } else if (element.type == "checkbox") {
-                element.checked = value == "on" ? true : false;
-            } else if (key == "abilities-text") {
-                let results = parseActions(element.value);
-                addActions(results);
+            if (element == undefined || element == null) {
+
+            }
+            else {
+                element.value = value;
+                if (key == "thac0") {
+                    element.dispatchEvent(new Event('change'));
+                } else if (element.type == "checkbox") {
+                    element.checked = value == "on" ? true : false;
+                } else if (key == "abilities-text") {
+                    let results = parseActions(element.value);
+                    addActions(results);
+                }
             }
         }
         //adding some log information to the symbiote log
